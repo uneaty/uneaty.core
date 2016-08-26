@@ -1,5 +1,4 @@
-﻿using knife.sharpener;
-using SharpNeat.Genomes.Neat;
+﻿using SharpNeat.Genomes.Neat;
 using UnityEngine;
 
 public abstract class GenomeProvider : MonoBehaviour, IProvider<NeatGenome>

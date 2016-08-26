@@ -7,7 +7,6 @@ using System;
 using System.Xml;
 using System.IO;
 using System.Linq;
-using knife.sharpener;
 using uNEATy.core.uNEATy;
 
 public class Optimizer : GenomeProvider

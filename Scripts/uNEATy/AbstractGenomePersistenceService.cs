@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Xml;
-using knife.sharpener;
 using SharpNeat.Core;
 using SharpNeat.Genomes.Neat;
 using UnityEngine;
