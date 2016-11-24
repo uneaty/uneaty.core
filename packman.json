@@ -1,3 +1,4 @@
 {
-  "name": "core"
+  "name": "core",
+  "export": "Assets/Scripts"
 }
