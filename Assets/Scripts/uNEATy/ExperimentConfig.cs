@@ -1,8 +1,10 @@
-﻿using SharpNeat.Decoders;
+﻿using System;
+using SharpNeat.Decoders;
 using SharpNeat.EvolutionAlgorithms;
 using SharpNeat.Genomes.Neat;
 using UnityEngine;
 
+[Serializable]
 public class ExperimentConfig : MonoBehaviour
 {
     public string Description;

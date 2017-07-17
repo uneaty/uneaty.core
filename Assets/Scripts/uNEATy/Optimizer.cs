@@ -32,8 +32,8 @@ public class Optimizer : GenomeProvider
     private int frames;
     private float updateInterval = 12;
 
-    private uint Generation;
-    private double Fitness;
+    public uint Generation;
+    public double Fitness;
 
     // Use this for initialization
     void Start()
@@ -57,12 +57,12 @@ public class Optimizer : GenomeProvider
         //  evaluationStartTime += Time.deltaTime;
 
         timeLeft -= Time.deltaTime;
-        accum += Time.timeScale/Time.deltaTime;
+        accum += Time.timeScale / Time.deltaTime;
         ++frames;
 
         if (timeLeft <= 0.0)
         {
-            var fps = accum/frames;
+            var fps = accum / frames;
             timeLeft = updateInterval;
             accum = 0.0f;
             frames = 0;
@@ -199,29 +199,6 @@ public class Optimizer : GenomeProvider
             return ControllerMap[box].GetFitness();
         }
         return 0;
-    }
-
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, 10, 100, 40), "Start EA"))
-        {
-            StartEA();
-        }
-        if (GUI.Button(new Rect(10, 60, 100, 40), "Stop EA"))
-        {
-            StopEA();
-        }
-        if (GUI.Button(new Rect(10, 110, 100, 40), "Run best"))
-        {
-            RunBest();
-        }
-        if (GUI.Button(new Rect(10, 160, 100, 40), "Run best"))
-        {
-            Reset();
-        }
-
-        GUI.Button(new Rect(10, Screen.height - 70, 100, 60),
-            string.Format("Generation: {0}\nFitness: {1:0.00000000}", Generation, Fitness));
     }
 
     public override NeatGenome Get()
